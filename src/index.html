@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#111111">
+
+  	<title>Программа лечения рака молочной железы - Мое здоровье</title>
+  
+  	<link rel="stylesheet" href="css/global.css">
+  	<link rel="stylesheet" href="css/vendor.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<link rel="stylesheet" href="css/swiper-bundle.min.css"/>
+
+</head>
+<body>
+	<div class="site-container">
+		@include('partials/header.html')
+
+		@include('partials/advantages.html')
+
+		@include('partials/about.html')
+
+		@include('partials/reviews.html')
+
+		<section class="bottom__block">
+
+			<div class="wrapper">
+				<div class="row information">
+
+					<div class="col">
+						<div class="information__title">
+							Что нужно знать о раке молочной железы?
+						</div>
+						<div class="information__title information__title-small">
+							- Во-первых, все в Ваших руках!
+						</div>
+						<p class="information__text">
+							Чтобы начать пользоваться приложением, нажмите на кнопку «Регистрация» и после регистрации выберите удобный для Вас формат — мобильное приложение или браузерная версия.
+						</p>
+						<a href="#" title="Регистрация" class="button__primary">
+							Регистрация
+						</a>
+						<div class="information__action">
+							Возьмите болезнь под контроль!
+						</div>
+					</div>
+
+					<div class="col">
+						<div class="information__banner">
+							Бесплатная<br />консультация<br />и поддержка
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="wrapper">
+				<div class="row">
+					<div class="col bottom__block-text">
+						МАТЕРИАЛ ПРЕДНАЗНАЧЕН ДЛЯ ШИРОКОЙ АУДИТОРИИ. ИНФОРМАЦИЯ, ПРЕДСТАВЛЕННАЯ НА ДАННОМ САЙТЕ, <nobr>НЕ ПРЕДСТАВЛЯЕТ</nobr> СОБОЙ И НЕ ЗАМЕНЯЕТ КОНСУЛЬТАЦИЮ ВРАЧА. НЕОБХОДИМО ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ ВРАЧА.
+					</div>
+				</div>
+			</div>
+		</section>
+
+    	@include('partials/footer.html')
+  </div>
+
+ 	<script src="js/swiper-bundle.min.js"></script>
+	<script src="js/vendor.js"></script>
+	<script src="js/main.js"></script>
+
+	<script>
+		var linkNav = document.querySelectorAll('[href^="#"]'), //выбираем все ссылки к якорю на странице
+    V = 0.3;  // скорость, может иметь дробное значение через точку (чем меньше значение - тем больше скорость)
+for (var i = 0; i < linkNav.length; i++) {
+    linkNav[i].addEventListener('click', function(e) { //по клику на ссылку
+        e.preventDefault(); //отменяем стандартное поведение
+        var w = window.pageYOffset,  // производим прокрутка прокрутка
+            hash = this.href.replace(/[^#]*(.*)/, '$1');  // к id элемента, к которому нужно перейти
+        t = document.querySelector(hash).getBoundingClientRect().top,  // отступ от окна браузера до id
+            start = null;
+        requestAnimationFrame(step);  // подробнее про функцию анимации [developer.mozilla.org]
+        function step(time) {
+            if (start === null) start = time;
+            var progress = time - start,
+                r = (t < 0 ? Math.max(w - progress/V, w + t) : Math.min(w + progress/V, w + t));
+            window.scrollTo(0,r);
+            if (r != w + t) {
+                requestAnimationFrame(step)
+            } else {
+                location.hash = hash  // URL с хэшем
+            }
+        }
+    }, false);
+}
+	</script>
+	
+
+</body>
+</html>

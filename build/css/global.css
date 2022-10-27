@@ -1,0 +1,38 @@
+/*colors*/
+@font-face {
+  font-family: 'Cera Round';
+  src: url("../fonts/typemates_-_ceraroundpro-thin-webfont.woff") format("woff2"), url("../fonts/typemates_-_ceraroundpro-thin-webfont.woff") format("woff");
+  font-weight: 200;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Cera Round';
+  src: url("../fonts/typemates_-_ceraroundpro-light-webfont.woff2") format("woff2"), url("../fonts/typemates_-_ceraroundpro-light-webfont.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Cera Round';
+  src: url("../fonts/typemates_-_ceraroundpro-regular-webfont.woff2") format("woff2"), url("../fonts/typemates_-_ceraroundpro-regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Cera Round';
+  src: url("../fonts/typemates_-_ceraroundpro-medium-webfont.woff2") format("woff2"), url("../fonts/typemates_-_ceraroundpro-medium-webfont.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Cera Round';
+  src: url("../fonts/typemates_-_ceraroundpro-bold-webfont.woff2") format("woff2"), url("../fonts/typemates_-_ceraroundpro-bold-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Cera Round';
+  src: url("../fonts/typemates_-_ceraroundpro-black-webfont.woff2") format("woff2"), url("../fonts/typemates_-_ceraroundpro-black-webfont.woff") format("woff");
+  font-weight: 900;
+  font-style: normal; }
+
+/*# sourceMappingURL=global.css.map */
